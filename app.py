@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 import json
 import re
 
-llm = Ollama(model="llama3")
+llm = Ollama(model="llama3.2")
 
 load_dotenv()  # Load all environment variables
 
@@ -85,7 +85,7 @@ def resume_screening():
                         not_selected()
 
                     # Display detailed feedback
-                    #st.write(parsed_response)
+                    st.write(parsed_response)
 
                 except json.JSONDecodeError:
                     st.error("The cleaned response is not valid JSON.")
